@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "problem_ids": [
+    "sun-a006077-hankel-determinants"
+  ],
+  "mathematical_source_revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "posing_source": {
+    "url": "https://arxiv.org/abs/1308.2900v5",
+    "locator": "Conjecture 3.16, physical page 17",
+    "pdf_sha256": "bb993599c738cc88ee2ef8e34209234b37631e169807dc69de124609aa738657"
+  },
+  "declaration_sources": [
+    {
+      "file": "SunA006077.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077.lean",
+      "git_blob_sha1": "ee60a5271007508ec0f91fe878baefc0a46d87d6",
+      "sha256": "e88b8adbad6821210eac3af66c2ffec455c1cec6a0674d775e66b8aff6fada90",
+      "bytes": 5156,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "source_as_translate",
+        "translate_hankel_det",
+        "source_hankel_reduction"
+      ],
+      "scope": "The literal integer finite sum equals weighted sparse translation; all integer-parameter finite Hankel determinants are translation invariant."
+    },
+    {
+      "file": "SunA006077Blocks.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Blocks.lean",
+      "git_blob_sha1": "849735ca215dbb1c0bd788da5a79fe98c89fe8e2",
+      "sha256": "d12074816a77c4969acdbdbf220bb68c43f08fe8ee1ef99bff3c98a5b566269b",
+      "bytes": 10513,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "block_zero",
+        "zero_branch",
+        "block_two"
+      ],
+      "scope": "The exact factorization for indices 3m and 3m+2 and vanishing at 3m+1, for every nonnegative m."
+    },
+    {
+      "file": "SunA006077Binary.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Binary.lean",
+      "git_blob_sha1": "8bda08e72e7693f34e13af5b7bf435bb590a4a07",
+      "sha256": "9e8a3b9813a4920fa20e0fb583ff96f252feabb37b94c791f3d8f26912227071",
+      "bytes": 10291,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "rueppel_determinants"
+      ],
+      "scope": "Both shifted binary Hankel families equal one in characteristic two at every finite size."
+    },
+    {
+      "file": "SunA006077Arithmetic.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Arithmetic.lean",
+      "git_blob_sha1": "1881c55da085ca561d499cc80633e1ebe91397e5",
+      "sha256": "28de6c0dfeebb2d841316df50e13bb07408f25f5e74114272999cd4330070bfb",
+      "bytes": 9223,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "c_six",
+        "q_odd_iff",
+        "D_normalization",
+        "E_normalization",
+        "normalized_odd"
+      ],
+      "scope": "Exact integral normalization and oddness at every size; coefficient parity detects exactly the positive powers of two."
+    },
+    {
+      "file": "SunA006077Positivity.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Positivity.lean",
+      "git_blob_sha1": "0a77b112c0d62704515519dca5b06f7e4ec3c9e1",
+      "sha256": "c2cd28782a612eecd7157e3340480a9f151263242bf2e84358b01ceed4a5ae56",
+      "bytes": 7427,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "multinomial_posSemidef"
+      ],
+      "scope": "Positive semidefiniteness of multinomial Hankel matrices at every finite size and nonnegative shift."
+    },
+    {
+      "file": "SunA006077Result.lean",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Result.lean",
+      "git_blob_sha1": "3fd134387e7030aed25240c13cf1d5964ef6c490",
+      "sha256": "ee31bbc45e814b6b01baa55c540bb802ec44435fbd634a8375df3606f511d3fe",
+      "bytes": 4466,
+      "namespace": "D5.S3.Combinatorics.Hankel.SunA006077",
+      "declarations": [
+        "claim",
+        "result"
+      ],
+      "scope": "The complete original all-index assertion, including n=0, vanishing on residue one, and a positive odd integral signed quotient otherwise."
+    }
+  ],
+  "written_proof": "Sections 2-4 give the complete all-index A006077 argument. Corollaries 5-8 give the valuation and square classes, real translation and scale parameters, exact inertia and nullity, positive-real-order harmonic determinant signs, and both Bernoulli/Euler-square sign assertions. The coverage section also proves the order-two Franel assertion.",
+  "finite_checks": "finite-check.json contains the exact finite ranges and values produced by verify.py.",
+  "distinct_scope": "Strict support, real translation and scale, inertia/nullity, and the harmonic, Bernoulli/Euler-square and order-two Franel consequences have written proofs. The pinned positivity declaration states semidefiniteness for the multinomial sequence, the translation declaration uses integer parameters, and result proves only the original all-index A006077 statement. Finite determinant and inertia ranges are stated in finite-check.json."
+}

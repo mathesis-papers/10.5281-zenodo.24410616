@@ -1,0 +1,40 @@
+{
+  "generated_paths": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CONTRIBUTING.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "README.md",
+    "formalization/nodes.json",
+    "manuscript/sun-a006077-hankel-determinants/README.md",
+    "manuscript/sun-a006077-hankel-determinants/finite-check.json",
+    "manuscript/sun-a006077-hankel-determinants/metadata.json",
+    "manuscript/sun-a006077-hankel-determinants/note.tex",
+    "manuscript/sun-a006077-hankel-determinants/references.json",
+    "manuscript/sun-a006077-hankel-determinants/source-evidence.json",
+    "manuscript/sun-a006077-hankel-determinants/verify.py",
+    "paper.json",
+    "paper.pdf",
+    "source.archive"
+  ],
+  "generator_version": "0.1.0",
+  "sha256": {
+    "CHANGELOG.md": "7fe7d3839a833cf24793be4cbb752c6e9d62da3df9ae4b2970768c2f4ec0e334",
+    "CITATION.cff": "7a2d24ce7fee8c94b279db8264d5b7b1e07ceb96d7bd0e8ea067b90a1839a874",
+    "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "README.md": "f06199ed395f1a25a8b0ea8317953e0f17eee8a5d3574dbf5a850de0aa7cad19",
+    "formalization/nodes.json": "24dfe67dbb8e70a464d51bc23827c618ef08fea89c21d489e93c093bc64562dd",
+    "manuscript/sun-a006077-hankel-determinants/README.md": "5f98a11ffbc82938d394b8ffac6b0254d601ac43a0ed7a6ab2e4a973661ff6c0",
+    "manuscript/sun-a006077-hankel-determinants/finite-check.json": "212fb9dac149d59f515ddc05da8aad1447cc307a89bf8c9264474a11b950be65",
+    "manuscript/sun-a006077-hankel-determinants/metadata.json": "5789e4b72a627c1b13ecca43d4bf649bacbfc1dfd86b9ff4c982904b48448aac",
+    "manuscript/sun-a006077-hankel-determinants/note.tex": "178b264f95efe9421b86c32f99dc87e98e5c384e7a0396617de80236a57a7e03",
+    "manuscript/sun-a006077-hankel-determinants/references.json": "2ac61c9beff53aaef011014609e91843a98e98229f7ccf0ccbc5ff79162a7033",
+    "manuscript/sun-a006077-hankel-determinants/source-evidence.json": "1bc3dfad92beee72d44ff87704d0d75f70e08417a7bfaef56ec9f709021a46a9",
+    "manuscript/sun-a006077-hankel-determinants/verify.py": "cbfda9f79ed3bed5bbdee9f38a99ab35402bd8d98e938cc61819641b1a397136",
+    "paper.json": "93357af4bbb0d6496cfad2817b0a7869f56a24f967a567df0dd8447180ad214f",
+    "paper.pdf": "522641cb92bf93685d7d975b98fda917a206dde038d563adad8e0ebc009e65f1",
+    "source.archive": "ff74770aac39599ad7edeac3e757f7b7438f81dc1f24e533d80a7442b9454f80"
+  },
+  "snapshot_identity": "f614f33ac0d4eb91aaee51d2ea779d571dc966dac6a31177511cb30549ff917a"
+}

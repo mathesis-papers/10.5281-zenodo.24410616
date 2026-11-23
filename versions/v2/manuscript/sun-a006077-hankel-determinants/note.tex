@@ -1,0 +1,580 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\FF}{\mathbb F_2}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\leanbase}{https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/}
+\title{Inertia extensions of Krattenthaler's identity for Sun's Hankel determinant conjecture}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{November 13, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Sun's \emph{On some determinants with Legendre symbol entries},
+arXiv:1308.2900v5, Conjecture 3.16, p.~17, we extend the zero-class
+identity credited to C.\ Krattenthaler in arXiv:1308.2900v6
+(April 24, 2014), Remark 3.16.
+For the sequence A006077, the Hankel determinant of order $n+1$ vanishes
+exactly when $n\equiv1\pmod3$; otherwise its quotient by
+$(-1)^{\lfloor(n+1)/3\rfloor}6^n$ is a positive odd integer.
+Binomial translation gives a three-block factorization. Integral row
+normalization reduces parity to the Rueppel determinants, and a positive
+moment representation gives the sign. We also give parameter-independent
+and square-class consequences, the exact inertia, and a two-parameter
+deformation. Related moment arguments establish the harmonic sign assertion
+in Conjecture 3.9(i) and the two squared-number assertions in Conjecture 3.17.
+\end{abstract}
+
+\section{Statement and attribution}
+For nonnegative integers $r$ and $n$, put
+\[
+ c_r=\binom{2r}{r}\binom{3r}{r}=\frac{(3r)!}{(r!)^3},\qquad
+ w_n=\sum_{r=0}^{\lfloor n/3\rfloor}(-1)^r3^{n-3r}\binom n{3r}c_r,
+ \qquad W_n=\det(w_{i+j})_{0\leq i,j\leq n}.
+\]
+An empty determinant is $1$. Sun posed the following assertion on August 21,
+2013~\cite[Conjecture 3.16, p.~17]{sun5}; the same assertion is recorded in
+OEIS A006077~\cite{oeis}.
+\begin{theorem}\label{thm:main}
+For every $n\geq0$,
+\[
+ W_n=0\quad\Longleftrightarrow\quad n\equiv1\pmod3.
+\]
+If $n\not\equiv1\pmod3$, then
+\[
+ \frac{(-1)^{\lfloor(n+1)/3\rfloor}W_n}{6^n}
+ \quad\hbox{is a positive odd integer.}
+\]
+\end{theorem}
+Sun's next version credits the identity $W_{3m+1}=0$ to
+C.\ Krattenthaler~\cite[Remark 3.16]{sun6}. Thus that identity is an earlier
+result, not a new consequence attributed here to the present authors.
+The nonzero-class assertion also appears in Sun's 2019 survey,
+Conjecture 81(i), p.~68, with the zero class attributed separately in
+Remark 81\cite{sun2019}.
+Our argument combines this residue-block structure with the positivity and
+parity of two multinomial Hankel families. The binary determinant ingredients
+are given by Bacher's triangular factorizations\cite[Theorems 1.2(i) and 10.1(i)]{bacher}
+and later by Cigler~\cite[Theorems 1.1 and 2.1]{cigler}. We give the needed reductions
+explicitly. The weighted binomial invariance used below is the falling
+$k$-binomial invariance of Spivey and Steil~\cite[Theorem 6.1]{spivey}.
+The positive moment representation of $c_r$ is given by Penson and
+Solomon~\cite[Example 9]{penson}; Section 4 derives the needed positivity
+from a product of beta variables.
+Later permutation proofs of the ordinary and shifted binary ingredients
+are given, respectively, by Grinberg (January 9, 2018) and
+Random (July 19, 2026)\cite{community}.
+For comparison, Zhu and Sun~\cite[Theorems 1.1 and 1.2]{zhusun} prove
+positive odd normalized Hankel determinants for Franel, Domb, and
+Catalan--Larcombe--French numbers. Those results settle other conjectures
+from the same source, but concern different sequences from A006077.
+Their general-Franel theorem proves odd integrality, not positivity for
+every order; their Ap\'ery theorem likewise proves integrality alone.
+Edgar's positive moment density for the sequence $A_n$\cite[Theorem 1]{edgar}
+supplies its positivity assertion, while Adamczewski\cite[Table 1, p.~16,
+A228304]{adamczewski} gives the two congruences of Conjecture 3.12.
+
+\section{Translation and the three residue classes}
+Define a sparse sequence by
+\[
+ b_{3r}=(-1)^r c_r,\qquad b_{3r+1}=b_{3r+2}=0.
+\]
+Then $w_n=\sum_{j=0}^n\binom nj3^{n-j}b_j$.
+More generally, if $\widetilde b_n=\sum_{j=0}^n\binom nj a^{n-j}b_j$,
+the lower triangular matrix
+$P_{ij}=\binom ij a^{i-j}$ for $j\leq i$ (and $0$ otherwise) satisfies
+\[
+ (\widetilde b_{i+j})_{0\leq i,j<N}
+   =P(b_{i+j})_{0\leq i,j<N}P^{\mathsf T}.
+\]
+Indeed, the coefficient of $a^{i+j-t}b_t$ on the right is
+$\sum_{u+v=t}\binom iu\binom jv=\binom{i+j}t$, by multiplying
+$(1+x)^i(1+x)^j$. Since $P$ has diagonal $1$,
+\begin{equation}\label{eq:translate}
+ W_n=\det(b_{i+j})_{0\leq i,j\leq n}.
+\end{equation}
+For $k\geq0$ set
+\[
+ D_k=\det(c_{i+j})_{0\leq i,j<k},\qquad
+ E_k=\det(c_{i+j+1})_{0\leq i,j<k}.
+\]
+\begin{lemma}\label{lem:blocks}
+For $m\geq0$,
+\begin{align}
+ W_{3m}&=(-1)^mD_{m+1}E_m^2,\label{eq:block0}\\
+ W_{3m+1}&=0,\label{eq:block1}\\
+ W_{3m+2}&=(-1)^{m+1}D_{m+1}E_{m+1}^2.\label{eq:block2}
+\end{align}
+\end{lemma}
+\begin{proof}
+Multiply row $i$ and column $i$ of the sparse matrix by
+$(-1)^{\lfloor i/3\rfloor}$. The determinant is unchanged because the two
+diagonal multipliers have product $1$. Group the indices by residues
+$0,1,2$ modulo $3$, using the same permutation for rows and columns.
+For indices $3p+r,3q+s$, the nonzero blocks have entries $c_{p+q}$ if
+$r=s=0$, and $-c_{p+q+1}$ if $r+s=3$. All other blocks are zero.
+
+For $n=3m$, the residue sizes are $(m+1,m,m)$, so the resulting matrix is
+the direct sum of $(c_{p+q})_{p,q<m+1}$ and
+$\left(\begin{smallmatrix}0&-C\\-C&0\end{smallmatrix}\right)$,
+where $C=(c_{p+q+1})_{p,q<m}$. Swapping the two column blocks gives
+determinant $(-1)^m\det(C)^2$, proving \eqref{eq:block0}.
+For $n=3m+2$ the three sizes are $(m+1,m+1,m+1)$ and the same calculation
+proves \eqref{eq:block2}.
+For $n=3m+1$ the sizes are $(m+1,m+1,m)$. Every row in the residue-$1$
+class is supported on the $m$ columns in the residue-$2$ class. These
+$m+1$ rows are linearly dependent, proving \eqref{eq:block1}.
+\end{proof}
+
+\section{Integral normalization and parity}
+For $r\geq1$, define the integer
+\[
+ q_r=\binom{2r-1}{r-1}\binom{3r-1}{r-1}.
+\]
+The two binomial identities
+$\binom{2r}r=2\binom{2r-1}{r-1}$ and
+$\binom{3r}r=3\binom{3r-1}{r-1}$ give $c_r=6q_r$.
+Define
+\[
+ d_m=\det(A_{ij})_{0\leq i,j\leq m},\quad
+ A_{0j}=c_j,\quad A_{ij}=q_{i+j}\ (i\geq1),\qquad
+ e_m=\det(q_{i+j+1})_{0\leq i,j<m}.
+\]
+Dividing all but the first row in $D_{m+1}$, and every row in $E_m$, by
+$6$ proves
+\begin{equation}\label{eq:normalize}
+ D_{m+1}=6^m d_m,\qquad E_m=6^m e_m.
+\end{equation}
+
+\begin{lemma}\label{lem:parity}
+Both $d_m$ and $e_m$ are odd for every $m\geq0$.
+\end{lemma}
+Zhu and Sun's Lemma 2.3\cite{zhusun}, applied with their $k=3$ and
+$x_r=c_r$, already gives the oddness of $D_{m+1}/6^m$ once the
+coefficient parity below is known. We include the binary argument for
+both normalized families. Its recurrences are the characteristic-$2$
+specializations of Guo's Lemma 2(3)--(6)\cite{guo}.
+\begin{proof}
+Let $s_2(r)$ count the ones in the binary expansion of $r$, and let
+$\nu_2$ denote the exponent of $2$ in a nonzero integer.
+The identity
+$\nu_2(r!)=\sum_{j\geq1}\lfloor r/2^j\rfloor=r-s_2(r)$ gives
+\[
+ \nu_2\binom{2r}r=s_2(r),\qquad
+ \nu_2\binom{3r}r=s_2(r)+s_2(2r)-s_2(3r).
+\]
+Consequently, $q_r$ odd implies $s_2(r)=1$, since $c_r=6q_r$ has
+valuation $1$ and the two binomial valuations are nonnegative. Conversely,
+if $r=2^j$, these valuations are $1$ and $0$, respectively, so $q_r$ is odd.
+
+Work now in $\FF$, and let $\ep(r)$ be $1$ if $r$ is a positive power of
+$2$, and $0$ otherwise, including $r=0$. Thus
+\[
+ q_r\equiv\ep(r)\pmod2\ (r\geq1),\qquad
+ \ep(2r)=\ep(r),\qquad
+ \ep(2r+1)=\begin{cases}1&r=0,\\0&r>0.\end{cases}
+\]
+Put
+\[
+ S_k=\det(\ep(i+j+1))_{0\leq i,j<k},\qquad
+ T_k=\det(\ep(i+j+2))_{0\leq i,j<k}
+ \quad\hbox{in }\FF.
+\]
+Separating even and odd indices gives
+\begin{equation}\label{eq:rueppel}
+ S_{2k}=S_k^2,\qquad S_{2k+1}=T_k^2,\qquad
+ T_N=S_{\lceil N/2\rceil}T_{\lfloor N/2\rfloor}.
+\end{equation}
+Here are the determinant reductions, including the odd-size case.
+The matrix for $S_{2k}$ becomes
+$\left(\begin{smallmatrix}J&B\\B&0\end{smallmatrix}\right)$,
+where $J$ has its only possible nonzero entry $J_{00}=1$, and
+$B=(\ep(i+j+1))_{i,j<k}$. Swapping the two column blocks gives
+determinant $\det(B)^2$ in characteristic $2$.
+For $S_{2k+1}$ order the indices as $0$; $2,4,\ldots,2k$;
+$1,3,\ldots,2k-1$. With
+$C=(\ep(i+j+2))_{i,j<k}$ and $u_j=\ep(j+1)$ the matrix is
+\[
+ \begin{pmatrix}1&0&u\\0&0&C\\u^{\mathsf T}&C&0\end{pmatrix}.
+\]
+Swapping the last two column groups makes this block triangular with
+diagonal blocks $\left(\begin{smallmatrix}1&u\\0&C\end{smallmatrix}\right)$
+and $C$, proving the second identity.
+Finally the matrix for $T_N$ becomes block diagonal with blocks for
+$S_{\lceil N/2\rceil}$ and $T_{\lfloor N/2\rfloor}$, because all
+off-diagonal entries are $\ep(2r+1)$ with $r\geq1$.
+
+The initial values are $S_0=T_0=S_1=T_1=1$.
+For $N\geq2$ every index on the right of \eqref{eq:rueppel} is smaller
+than $N$. Strong induction therefore proves $S_N=T_N=1$ for all $N$.
+The determinant $e_m$ reduces to $S_m$. The first row of $A$ reduces
+to $(1,0,\ldots,0)$, since $c_0=1$ and $6\mid c_j$ for $j>0$.
+Expansion along that row shows $d_m\equiv T_m=1\pmod2$ as well.
+\end{proof}
+
+\section{Positive moments and completion of the proof}
+\begin{lemma}\label{lem:positive}
+For all $k\geq0$, $D_k>0$ and $E_k>0$.
+\end{lemma}
+\begin{proof}
+For $0<a<1$ let $U_a$ have probability density
+\[
+ \frac{t^{a-1}(1-t)^{-a}}{B(a,1-a)}\quad(0<t<1),\qquad
+ B(a,1-a)=\int_0^1t^{a-1}(1-t)^{-a}\,dt.
+\]
+The integral is finite and positive. Integration by parts in the beta
+integrals gives
+$\mathbb E(U_a^r)=(a)_r/r!$, where
+$(a)_r=a(a+1)\cdots(a+r-1)$ and $(a)_0=1$.
+Explicitly, integration of the derivative of
+$t^{a+r}(1-t)^{1-a}$, whose endpoint values are zero, gives
+$B(a+r+1,1-a)=\frac{a+r}{r+1}B(a+r,1-a)$; induction gives the formula.
+Take independent $U_{1/3}$ and $U_{2/3}$ and set
+$X=27U_{1/3}U_{2/3}$. Grouping the factors of $(3r)!$ by residues modulo
+$3$ proves
+\[
+ \mathbb E(X^r)=27^r\frac{(1/3)_r(2/3)_r}{(r!)^2}=c_r.
+\]
+Every open subinterval of $(0,27)$ has positive probability for $X$:
+its inverse image under $(u,v)\mapsto27uv$ contains a nonempty open
+rectangle in $(0,1)^2$, where both densities are positive.
+For any nonzero real polynomial $p$ and any integer $s\geq0$,
+$\mathbb E[X^s p(X)^2]>0$. Indeed, a nonzero polynomial has finitely
+many zeros, so some such interval has $X^s p(X)^2$ bounded below by a
+positive constant. Hence every matrix $(c_{i+j+s})_{i,j<k}$ is positive
+definite for $k\geq1$, by applying this inequality to
+$p(x)=\sum_{i<k}v_i x^i$ for $v\ne0$. Its determinant is positive.
+This proves the assertion for $s=0,1$; the empty determinants equal $1$.
+\end{proof}
+By \eqref{eq:normalize}, $d_m,e_m>0$, and Lemma~\ref{lem:parity} makes
+them positive odd integers. Substitution in Lemma~\ref{lem:blocks} yields
+\begin{align}
+ \frac{(-1)^mW_{3m}}{6^{3m}}&=d_m e_m^2,\label{eq:quot0}\\
+ \frac{(-1)^{m+1}W_{3m+2}}{6^{3m+2}}&=d_m e_{m+1}^2.\label{eq:quot2}
+\end{align}
+These prove Theorem~\ref{thm:main}, including the nonvanishing and the
+case $n=0$, where $d_0=e_0=W_0=1$.
+
+\begin{corollary}\label{cor:extra}
+For $n\not\equiv1\pmod3$, $\nu_2(W_n)=n$.
+The positive normalized determinants at $n=3m$ and $n=3m+2$ represent the
+same square class in $\mathbb Q_{>0}^{\times}/(\mathbb Q_{>0}^{\times})^2$,
+namely the class of $d_m$.
+Moreover, replacing $3^{n-3r}$ in the definition of $w_n$ by
+$a^{n-3r}$ for any $a\in\RR$ leaves every $W_n$ unchanged.
+\end{corollary}
+\begin{proof}
+The first two assertions follow directly from \eqref{eq:quot0} and
+\eqref{eq:quot2}. The last follows from the triangular identity
+\eqref{eq:translate}, which holds for every real $a$.
+\end{proof}
+
+\begin{corollary}\label{cor:inertia}
+For real $a,t$ define
+\[
+ w_j(a,t)=\sum_{r=0}^{\lfloor j/3\rfloor}
+  \binom j{3r}a^{j-3r}t^r c_r,\qquad
+ H_n(a,t)=(w_{i+j}(a,t))_{0\leq i,j\leq n}.
+\]
+For $t\ne0$, the inertia of $H_n(a,t)$, listed as the numbers of positive,
+negative and zero eigenvalues, is
+\[
+\begin{array}{c|c}
+n&\operatorname{inertia} H_n(a,t)\\\hline
+3m&(2m+1,m,0)\\
+3m+1&(2m+1,m,1)\\
+3m+2&(2m+2,m+1,0).
+\end{array}
+\]
+In particular, every zero in the original determinant family has nullity
+exactly one. For $n\not\equiv1\pmod3$,
+\[
+ \det H_n(a,t)=t^{n(n+1)/3}W_n.
+\]
+For $t=0$, the inertia is $(1,0,n)$ and the determinant is $1$ at $n=0$
+and $0$ otherwise. For nonzero integers $t$ and $n\not\equiv1\pmod3$,
+\[
+ \nu_2(\det H_n(a,t))=n+\frac{n(n+1)}3\nu_2(t)
+ \quad\text{when }a\in\ZZ.
+\]
+\end{corollary}
+\begin{proof}
+Translation is a real congruence by the invertible matrix $P$, so it
+preserves inertia. The sparse matrix with entries $c_{(i+j)/3}$ when
+$3\mid i+j$, and zero otherwise, has the positive definite block
+from $D$ and the paired block
+$\left(\begin{smallmatrix}0&C\\C^{\mathsf T}&0\end{smallmatrix}\right)$.
+In the two balanced cases $C$ is positive definite of size $m$ or $m+1$;
+the change of variables $(x,y)\mapsto(x+y,x-y)$ gives one positive and
+one negative direction for each dimension. In the unbalanced case $C$
+is $(m+1)\times m$ and has full column rank because its first $m$ rows
+form the positive definite matrix for $E_m$. Invertible row and column
+changes reduce it to $\left(\begin{smallmatrix}I_m\\0\end{smallmatrix}\right)$,
+so the paired block has inertia $(m,m,1)$. This proves the table, also
+when $m=0$.
+
+Let $\rho$ be the real cube root of $t\ne0$. Multiplication on both sides
+by $\operatorname{diag}(1,\rho,\ldots,\rho^n)$ changes the sparse
+$t=1$ matrix into the sparse $t$ matrix. Its determinant multiplier is
+$\rho^{n(n+1)}=t^{n(n+1)/3}$ in the nonzero classes. This exponent is
+even: it is $m(3m+1)$ or $(m+1)(3m+2)$. Taking $t=-1$ identifies the
+base determinant with $W_n$. The valuation follows from
+Corollary~\ref{cor:extra}. At $t=0$ the entries are $a^{i+j}$, the
+outer product of $(1,a,\ldots,a^n)$ with itself.
+\end{proof}
+
+\section{Moment consequences for two sibling conjectures}
+The assertions below concern different sequences, not additional parts of
+the A006077 assertion. They use the same positivity principle: a measure
+with interval support makes polynomial Gram matrices strictly positive.
+
+\begin{corollary}\label{cor:harmonic}
+For every real $\alpha>0$ and integer $n\geq1$, with
+$h_j=\sum_{k=1}^j k^{-\alpha}$ and $h_0=0$,
+\[
+ (-1)^n\det(h_{i+j})_{0\leq i,j\leq n}>0.
+\]
+Thus Sun's v5 Conjecture 3.9(i), p.~15, holds for every positive integer
+order, and also for every positive real order. For order one, a prior
+exact evaluation follows from Petrov's answer of February 16, 2017,
+Cigler's completion of February 17, and Amdeberhan's independent identity
+proof of February 18; see also Cigler, Theorem 4.1, equation (4.2)\cite{harmonic}.
+\end{corollary}
+\begin{proof}
+The substitution $x=e^{-u}$ in the gamma integral gives
+\[
+ h_j=\int_0^1\frac{1-x^j}{1-x}\,
+       \frac{(-\log x)^{\alpha-1}}{\Gamma(\alpha)}\,dx.
+\]
+Subtract row $0$ from each other row and column $0$ from each other
+column. The resulting matrix is
+$\left(\begin{smallmatrix}0&h^{\mathsf T}\\h&-G\end{smallmatrix}\right)$,
+where $h=(h_1,\ldots,h_n)^{\mathsf T}$ and
+\[
+ G_{ij}=\int_0^1 (1-x^i)(1-x^j)
+ \frac{(-\log x)^{\alpha-1}}{\Gamma(\alpha)(1-x)}\,dx
+ \quad(1\leq i,j\leq n).
+\]
+The integrals converge at both endpoints. The polynomials $1-x^i$
+are linearly independent and the weight is positive on $(0,1)$; hence
+$G$ is positive definite. The Schur complement of $-G$ is
+$h^{\mathsf T}G^{-1}h>0$ since $h_1=1$. Therefore the inertia is
+$(1,n,0)$, proving the sign.
+\end{proof}
+
+\begin{corollary}\label{cor:squares}
+Let $B_j$ and $E_j$ denote the Bernoulli and Euler numbers in the
+conventions
+\[
+ \frac{z}{e^z-1}=\sum_{j\geq0}B_j\frac{z^j}{j!},\qquad
+ \frac1{\cosh z}=\sum_{j\geq0}E_j\frac{z^j}{j!}.
+\]
+For every integer $n\geq1$,
+\[
+ \det(B_{i+j}^2)_{0\leq i,j\leq n}<0,
+ \qquad \det(E_{i+j}^2)_{0\leq i,j\leq n}>0.
+\]
+These are the two assertions of Sun's v5 Conjecture 3.17, p.~18.
+\end{corollary}
+\begin{proof}
+Let $U,V$ be independent exponential variables of mean one, and let
+$\epsilon$ be an independent uniform sign. Write $\mu$ for the positive
+measure $4\sum_{k,l\geq1}\mathcal L(\epsilon UV/(4\pi^2kl))$.
+Its absolute moments of every integer order $j\geq2$ are finite.
+For even $j\geq2$, Euler's zeta formula\cite[25.6.2]{dlmf} gives
+\[
+ \int x^j\,d\mu(x)
+ =\frac{4(j!)^2\zeta(j)^2}{(2\pi)^{2j}}=B_j^2;
+\]
+the odd moments of orders at least three are zero. Although $\mu$ has
+infinite total mass, the measure $x^2d\mu(x)$ is finite, has moments
+of every order, and gives positive mass to every open interval.
+Consequently $C=(B_{i+j}^2)_{1\leq i,j\leq n}$ is positive definite.
+Write $b=(B_1^2,\ldots,B_n^2)^{\mathsf T}$. Its bordered matrix has
+Schur complement $1-b^{\mathsf T}C^{-1}b$. The variational identity
+\[
+ b^{\mathsf T}C^{-1}b=\max_v(2b^{\mathsf T}v-v^{\mathsf T}Cv)
+ \geq 2\cdot\tfrac14\cdot9-\tfrac1{36}\cdot9^2=\tfrac94
+\]
+uses $v=(9,0,\ldots,0)^{\mathsf T}$. Thus the complement is negative
+and the Bernoulli-square determinant is negative.
+
+For Euler numbers, let $Y$ have density $1/(2\cosh(\pi y/2))$ on
+$\RR$. With $u=e^{\pi y}$, Euler's beta integral gives, for
+$|z|<\pi/2$,
+\[
+ \mathbb E e^{zY}
+ =\frac1\pi\int_0^\infty\frac{u^{z/\pi-1/2}}{1+u}\,du
+ =\sec z.
+\]
+These exponential moments justify differentiating at zero. If $Z$ is
+an independent copy of $Y$, the Taylor expansion of $\sec z$
+\cite[4.19.5]{dlmf} gives
+$\mathbb E(YZ)^j=(\mathbb E Y^j)^2=E_j^2$, including odd $j$.
+The product $YZ$ has positive mass in every open interval of $\RR$.
+Its polynomial Gram matrices are therefore positive definite, proving
+the Euler-square inequality.
+\end{proof}
+
+\section{Coverage and verification}
+All numbered items below refer to Sun v5 unless another version is given.
+The labels apply to the precise assertions at those locators; the
+inertia and deformation statements are not posed in the source.
+\small
+\begin{longtable}{@{}p{0.39\linewidth}p{0.56\linewidth}@{}}
+\toprule
+Source item & Coverage \\
+\midrule
+3.1--3.8 (each), pp.~12--15 & Not covered: character-symbol and reciprocal matrices, not these moment sequences. \\
+3.9(i), p.~15 & Proved: Corollary~\ref{cor:harmonic}; order one reproves the Petrov--Cigler evaluation (2017)\cite{harmonic}. Positive real orders are not posed; proved here. \\
+3.9(ii), p.~15 & Not covered: the harmonic determinant's prime congruence. \\
+3.10(i), p.~15, ordinary Franel part & Prior proof cited: Zhu--Sun, Theorem 1.1\cite{zhusun}. \\
+3.10(i), generalized Franel part & Proved for $r=2$ below. Prior odd integrality for $r\geq3$ cited, not general positivity; positivity for $r\geq4$ is not covered. \\
+3.10(ii), p.~15 & Not covered: prime congruence. \\
+3.11(i), p.~16 & Prior integrality cited: Zhu--Sun, Theorem 1.3. The $A_n$ part is positive by Edgar's Theorem 1; positivity of $b_n$ is not covered. \\
+3.11(ii), p.~16 & Not covered: prime congruence. \\
+3.12, p.~16 & Prior proof cited: Adamczewski (2026), Table 1, p.~16, A228304\cite{adamczewski}; both prime congruences. \\
+3.13(i), p.~16; 3.14(i), p.~17 & Prior proofs cited: Zhu--Sun, Theorem 1.2. \\
+3.13(ii), p.~16; 3.14(ii), p.~17 & Not covered: prime-square congruences. \\
+3.15(i),(ii), p.~17 & Not covered: Catalan-binomial determinants. \\
+3.16, p.~17 & Proved in full: Theorem~\ref{thm:main}; zero class reproved with prior attribution to Krattenthaler, attested by Sun, April 24, 2014. \\
+3.17 (both inequalities), p.~18 & Proved: Corollary~\ref{cor:squares}. \\
+v6, Remark 3.16, p.~18 & Reproved; prior result Krattenthaler, attested 2014. \\
+OEIS A006077, August 21, 2013 comment & Proved: the same all-index assertion. \\
+v6, Conjecture 3.16, p.~18; OEIS August 23, 2013 comment & Not covered: the later prime-square congruence. \\
+Inertia, nullity, scale deformation, valuation, square classes & Not posed; proved in Corollaries~\ref{cor:extra} and~\ref{cor:inertia}. \\
+\bottomrule
+\end{longtable}
+\normalsize
+For completeness, the order-$2$ part of 3.10(i) follows by the same
+normalization and moment argument. Vandermonde's identity gives
+$f_j^{(2)}=\binom{2j}j=\mathbb E(4U)^j$ for
+$U\sim\operatorname{Beta}(1/2,1/2)$. For $j>0$, write
+$\binom{2j}j=2q'_j$ with $q'_j=\binom{2j-1}{j-1}$.
+Its $2$-adic valuation is $s_2(j)-1$, so $q'_j$ is odd exactly at
+powers of two. Dividing all but the first row of the determinant by
+$2$ gives an integer determinant reducing modulo $2$ to $T_n=1$.
+The interval support of $4U$ gives strict positivity. Hence
+$2^{-n}\det(f_{i+j}^{(2)})_{0\leq i,j\leq n}$ is a positive odd integer.
+For the $A_n$ part of 3.11(i), Edgar's strictly positive density on
+$(0,17+12\sqrt2)$ makes every polynomial Gram matrix positive definite.
+Combining this with Zhu--Sun's integral $24^{-n}$ normalization proves
+the positive-integer assertion for that sequence.
+
+The complete written proof is Sections 2--4. The following pinned Lean
+files give the corresponding declarations, with namespace
+\texttt{D5.S3.Combinatorics.Hankel.SunA006077}:
+\begin{itemize}
+\raggedright
+\item \href{\leanbase SunA006077.lean}{\texttt{SunA006077.lean}}:
+\texttt{source\_as\_translate} and \texttt{translate\_hankel\_det}
+identify the literal sum and its Hankel invariance.
+\item \href{\leanbase SunA006077Blocks.lean}{\texttt{SunA006077Blocks.lean}}:
+\texttt{block\_zero}, \texttt{zero\_branch}, and \texttt{block\_two}
+give all three residue classes.
+\item \href{\leanbase SunA006077Binary.lean}{\texttt{SunA006077Binary.lean}}:
+\texttt{rueppel\_determinants} proves both binary families equal $1$.
+\item \href{\leanbase SunA006077Arithmetic.lean}{\texttt{SunA006077Arithmetic.lean}}:
+\texttt{c\_six}, \texttt{q\_odd\_iff}, \texttt{D\_normalization},
+\texttt{E\_normalization}, and \texttt{normalized\_odd} give integral
+normalization and oddness.
+\item \href{\leanbase SunA006077Positivity.lean}{\texttt{SunA006077Positivity.lean}}:
+\texttt{multinomial\_posSemidef} gives positive semidefiniteness for every
+nonnegative shift. The strict-support argument above gives positive
+definiteness directly.
+\item \href{\leanbase SunA006077Result.lean}{\texttt{SunA006077Result.lean}}:
+\texttt{result} proves the complete all-index statement, obtaining strict
+positivity from semidefiniteness and odd, hence nonzero, determinants.
+\end{itemize}
+Corollaries~\ref{cor:extra}--\ref{cor:squares}, including the real
+parameters, inertia and sibling inequalities, are written proofs;
+the pinned declarations concern the original A006077 family.
+The accompanying
+\texttt{verify.py} checks exact finite instances independently from the
+literal sum; these finite checks complement, rather than replace, the
+all-index proof.
+
+\small
+\begin{thebibliography}{99}
+\bibitem{sun5} Z.-W. Sun,
+\emph{On some determinants with Legendre symbol entries},
+\href{https://arxiv.org/abs/1308.2900v5}{arXiv:1308.2900v5}, August 22, 2013,
+Conjecture 3.16, p.~17.
+\bibitem{sun6} Z.-W. Sun,
+\emph{On some determinants with Legendre symbol entries},
+\href{https://arxiv.org/abs/1308.2900v6}{arXiv:1308.2900v6},
+April 24, 2014, Conjecture and Remark 3.16.
+\bibitem{oeis} OEIS Foundation Inc.,
+\href{https://oeis.org/A006077}{The On-Line Encyclopedia of Integer Sequences,
+A006077}, comments and formula by Z.-W. Sun dated August 21 and 23, 2013,
+accessed November 13, 2026.
+\bibitem{cigler} J. Cigler,
+\emph{A curious class of Hankel determinants},
+\href{https://arxiv.org/abs/1803.05164v2}{arXiv:1803.05164v2} (2018),
+Theorems 1.1 and 2.1.
+\bibitem{spivey} M. Z. Spivey and L. L. Steil,
+\emph{The $k$-binomial transforms and the Hankel transform},
+Journal of Integer Sequences \textbf{9} (2006), Article 06.1.1, Theorem 6.1.
+\href{https://cs.uwaterloo.ca/journals/JIS/VOL9/Spivey/spivey7.html}{Full text}.
+\bibitem{penson} K. A. Penson and A. I. Solomon,
+\emph{Coherent states from combinatorial sequences},
+\href{https://arxiv.org/abs/quant-ph/0111151v1}{arXiv:quant-ph/0111151v1}
+(2001), equation (6) and Example 9.
+\bibitem{zhusun} B.-X. Zhu and Z.-W. Sun,
+\emph{Hankel-type determinants for some combinatorial sequences},
+International Journal of Number Theory \textbf{14} (2018), no.~5, 1265--1277.
+\href{https://doi.org/10.1142/S1793042118500793}{doi:10.1142/S1793042118500793};
+\href{https://arxiv.org/abs/1609.06810v4}{arXiv:1609.06810v4}.
+\bibitem{harmonic} J. Cigler,
+\emph{Hankel determinants of harmonic numbers and related topics},
+\href{https://homepage.univie.ac.at/johann.cigler/preprints/harmonic.pdf}{author-hosted preprint},
+Theorem 4.1, equation (4.2), p.~11;
+F. Petrov, \href{https://mathoverflow.net/a/262422}{answer}, February 16, 2017;
+J. Cigler, \href{https://mathoverflow.net/a/262469}{completion}, February 17, 2017;
+T. Amdeberhan, \href{https://mathoverflow.net/a/262576}{independent proof}, February 18, 2017.
+\bibitem{dlmf} NIST,
+\emph{Digital Library of Mathematical Functions},
+\href{https://dlmf.nist.gov/25.6.E2}{equation 25.6.2} and
+\href{https://dlmf.nist.gov/4.19.E5}{equation 4.19.5},
+accessed November 13, 2026.
+\bibitem{bacher} R. Bacher,
+\emph{Paperfolding and Catalan numbers},
+\href{https://arxiv.org/abs/math/0406340v1}{arXiv:math/0406340v1},
+June 17, 2004, Theorems 1.2(i) and 10.1(i).
+\bibitem{guo} Y.-J. Guo,
+\emph{On the regularity of the Hankel determinant sequence of the characteristic sequence of powers},
+\href{https://arxiv.org/abs/1806.08729v1}{arXiv:1806.08729v1}, June 20, 2018,
+Lemma 2(3)--(6), pp.~6--7; Advances in Applied Mathematics
+\textbf{104} (2019), 100--116,
+\href{https://doi.org/10.1016/j.aam.2018.12.001}{doi:10.1016/j.aam.2018.12.001}.
+\bibitem{sun2019} Z.-W. Sun,
+\emph{Open Conjectures on Congruences}, Nanjing University Journal of
+Mathematics Biquarterly \textbf{36} (2019), no.~1, 1--99,
+Conjecture 81(i) and Remark 81, p.~68,
+\href{https://doi.org/10.3969/j.issn.0469-5097.2019.01.01}{doi:10.3969/j.issn.0469-5097.2019.01.01}.
+\bibitem{edgar} G. A. Edgar,
+\emph{The Ap\'ery Numbers as a Stieltjes Moment Sequence},
+\href{https://arxiv.org/abs/2005.10733v2}{arXiv:2005.10733v2},
+first released May 21, 2020, Theorem 1, p.~1.
+\bibitem{adamczewski} T. Adamczewski,
+\emph{OEIS Open: How many conjectures can language models turn into theorems?},
+\href{https://arxiv.org/abs/2608.11941v2}{arXiv:2608.11941v2},
+August 13, 2026, Table 1, p.~16, A228304.
+\bibitem{community} D. Grinberg,
+\href{https://math.stackexchange.com/a/2597700}{answer to \emph{A curious Hankel determinant}},
+January 9, 2018, Theorem 1;
+Random, \href{https://mathoverflow.net/a/513374}{MathOverflow answer},
+July 19, 2026, the shifted power-of-two matrix.
+\end{thebibliography}
+\bigskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

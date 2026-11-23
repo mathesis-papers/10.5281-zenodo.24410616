@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-13",
+  "references": [
+    {
+      "key": "sun5",
+      "authors": "Zhi-Wei Sun",
+      "date": "2013-08-22",
+      "url": "https://arxiv.org/pdf/1308.2900v5",
+      "locator": "Conjecture 3.16, physical p. 17; 3.9(i), p. 15; 3.17, p. 18",
+      "scope": "The original all-index A006077 assertion and the harmonic and squared-number sibling assertions.",
+      "source_sha256": [
+        "bb993599c738cc88ee2ef8e34209234b37631e169807dc69de124609aa738657"
+      ]
+    },
+    {
+      "key": "sun6",
+      "authors": "Zhi-Wei Sun",
+      "date": "2014-04-24",
+      "url": "https://arxiv.org/pdf/1308.2900v6",
+      "locator": "Conjecture and Remark 3.16, physical p. 18",
+      "scope": "Attributes the zero residue class to C. Krattenthaler; adds a separate prime-square congruence.",
+      "source_sha256": [
+        "efdcc76c21dd8f5fde8e10051fa9759848b9d2bbe11d27b6166b1e3740eb0088"
+      ]
+    },
+    {
+      "key": "oeis",
+      "authors": "Zhi-Wei Sun (two comments and finite-sum formula)",
+      "url": "https://oeis.org/A006077",
+      "locator": "Revision 145 (2026-10-29); comments dated 2013-08-21 and 2013-08-23",
+      "scope": "The first comment is the all-index assertion; the second is the separate prime-square congruence.",
+      "source_sha256": [
+        "db52500fbe50d869d9f9d1c9c08ce64d774650a583138850969dae145edcd6bb"
+      ]
+    },
+    {
+      "key": "cigler",
+      "authors": "Johann Cigler",
+      "date": "2018",
+      "url": "https://arxiv.org/pdf/1803.05164v2",
+      "locator": "Theorems 1.1 and 2.1",
+      "scope": "Ordinary and shifted Rueppel determinant identities, specialized modulo two.",
+      "source_sha256": [
+        "e72f84ea1724fbaffda3172bbc35b4d07dac9abd9811fe0186efac89520fe83c"
+      ]
+    },
+    {
+      "key": "spivey",
+      "authors": "Michael Z. Spivey; Laura L. Steil",
+      "date": "2006",
+      "url": "https://cs.uwaterloo.ca/journals/JIS/VOL9/Spivey/spivey7.pdf",
+      "locator": "Theorem 6.1, pp. 15-16; Journal of Integer Sequences 9, Article 06.1.1; journal page records online publication 2005-11-15",
+      "scope": "Weighted falling-binomial transformations preserve Hankel determinants.",
+      "source_sha256": [
+        "2b309942cde765f3ea912871e392306e9e47800742cee0faf4d4d650aa77ac0c"
+      ]
+    },
+    {
+      "key": "penson",
+      "authors": "Karol A. Penson; Allan I. Solomon",
+      "date": "2001",
+      "url": "https://arxiv.org/pdf/quant-ph/0111151v1",
+      "locator": "Equation (6), Example 9",
+      "scope": "Positive moments (3r)!/(r!)^3 on the interval [0,27].",
+      "source_sha256": [
+        "df043e00137bd06062ed876ce10736ae18b63ddbb66afb4a6b2cb77ec7039f7f"
+      ]
+    },
+    {
+      "key": "zhusun",
+      "authors": "Bao-Xuan Zhu; Zhi-Wei Sun",
+      "date": "2016-09-22 (v1); 2018 (journal)",
+      "url": "https://arxiv.org/pdf/1609.06810v4",
+      "doi": "10.1142/S1793042118500793",
+      "locator": "Theorems 1.1-1.3, pp. 2-3; Lemma 2.3, p. 4",
+      "scope": "Ordinary Franel, Domb and Catalan-Larcombe-French positive odd normalizations; generalized Franel odd integrality; Apery integrality. Lemma 2.3 with k=3 gives D_(m+1)/6^m odd for the multinomial coefficients. Does not state positivity for every generalized Franel order or for the Apery determinants.",
+      "source_sha256": [
+        "59875b8416f26957e7100f9779e80c49a626a5190c713f6e687403ef75c0aa54"
+      ]
+    },
+    {
+      "key": "harmonic",
+      "authors": "Fedor Petrov; Johann Cigler; Tewodros Amdeberhan",
+      "url": "https://homepage.univie.ac.at/johann.cigler/preprints/harmonic.pdf",
+      "locator": "Theorem 4.1, equation (4.2), p. 11; MathOverflow answers 262422, 262469, 262576",
+      "dates": [
+        "2017-02-16",
+        "2017-02-17",
+        "2017-02-18"
+      ],
+      "scope": "Exact evaluation for harmonic order one; the dated Petrov identity and Cigler determinant reduction precede Amdeberhan's independent proof of the identity. Does not establish every positive real harmonic order.",
+      "source_sha256": [
+        "a898fd30d678bbbf0a237e638d48ac90b3275a78b3226135701bd74257851caf"
+      ]
+    },
+    {
+      "key": "dlmf",
+      "authors": "NIST Digital Library of Mathematical Functions",
+      "urls": [
+        "https://dlmf.nist.gov/25.6.E2",
+        "https://dlmf.nist.gov/4.19.E5"
+      ],
+      "locator": "Equations 25.6.2 and 4.19.5",
+      "scope": "Even zeta values in terms of Bernoulli numbers; secant series in terms of Euler numbers.",
+      "source_sha256": [
+        "b0eb0ccace3ae2de5209e342fbf42214d2451f76f8c660aae2647e056848bd32",
+        "63aee522f32404483fc46699b809abe3c4af2e34e7e0349996a032967c5440e2"
+      ]
+    },
+    {
+      "key": "bacher",
+      "authors": "Roland Bacher",
+      "date": "2004-06-17",
+      "url": "https://arxiv.org/pdf/math/0406340v1",
+      "locator": "Theorem 1.2(i), p. 4; Theorem 10.1(i), p. 22",
+      "scope": "Unit triangular and sign-diagonal factorizations of both ordinary and shifted Rueppel Hankel matrices; all finite principal determinants are plus or minus one.",
+      "source_sha256": [
+        "388b110f999a0b22c82e1f84712b237fd874c75db187d7d05b89fce7931169c7"
+      ]
+    },
+    {
+      "key": "guo",
+      "authors": "Ying-Jun Guo",
+      "date": "2018-06-20",
+      "url": "https://arxiv.org/pdf/1806.08729v1",
+      "doi": "10.1016/j.aam.2018.12.001",
+      "locator": "Lemma 2(3)-(6), pp. 6-7; Proposition 1, pp. 7-8",
+      "scope": "The four integer binary determinant recurrences reduce modulo two to equation (6) of the note.",
+      "source_sha256": [
+        "e8a2af9821fdc5c7c55d5a4d46ea27e7f4f893e99f4e8328daf23f58d53380c4"
+      ]
+    },
+    {
+      "key": "sun2019",
+      "authors": "Zhi-Wei Sun",
+      "date": "2019",
+      "url": "https://www.researchgate.net/publication/336577970_Open_Conjectures_on_Congruences",
+      "doi": "10.3969/j.issn.0469-5097.2019.01.01",
+      "locator": "Conjecture 81(i) and Remark 81, printed p. 68; Nanjing University Journal of Mathematics Biquarterly 36(1), 1-99",
+      "scope": "The author-uploaded full text retains the nonzero positive-odd assertion as a conjecture and attributes the zero class separately to Krattenthaler. This is distinct from arXiv:0911.5665.",
+      "source_sha256": []
+    },
+    {
+      "key": "edgar",
+      "authors": "Gerald A. Edgar",
+      "date": "2020-05-21 (v1); 2020-09-02 (v2)",
+      "url": "https://arxiv.org/pdf/2005.10733v2",
+      "locator": "Theorem 1, p. 1",
+      "scope": "A strictly positive density on (0,17+12 sqrt(2)) represents the zeta-three Apery numbers A_n. Combined with Zhu-Sun integral normalization, this gives the A_n part of Sun v5 Conjecture 3.11(i).",
+      "source_sha256": [
+        "d94d848b7e08ab9fb6f9a964be1e41c9fa9ab19be1a96079b679ef75b5b11fd6"
+      ]
+    },
+    {
+      "key": "adamczewski",
+      "authors": "Tom Adamczewski",
+      "date": "2026-08-12 (v1); 2026-08-13 (v2)",
+      "url": "https://arxiv.org/pdf/2608.11941v2",
+      "locator": "Table 1, p. 16, A228304",
+      "scope": "States and gives the anti-triangular-modulo-prime argument for both congruences of Sun v5 Conjecture 3.12.",
+      "source_sha256": [
+        "5d6ac6ae7c91ad7a93fdf7052e36fb382bb1059e3fd74087eae61008c022333e"
+      ]
+    },
+    {
+      "key": "community",
+      "authors": "Darij Grinberg; Random",
+      "dates": [
+        "2018-01-09",
+        "2026-07-19"
+      ],
+      "urls": [
+        "https://math.stackexchange.com/a/2597700",
+        "https://mathoverflow.net/a/513374"
+      ],
+      "locator": "Grinberg, Theorem 1; Random, the full induction on the shifted power-of-two matrix",
+      "scope": "Later permutation proofs of the ordinary and shifted binary determinant ingredients, respectively; neither is the complete A006077 statement.",
+      "source_sha256": [
+        "aaa91ee69582514e83039a1d373874c4801ccda4fe66a08bbbb456bf675f4b14",
+        "611407c47a26ed69f077874df93feaed3303dbdfaa96dc4a2e792ec3456b0c55"
+      ]
+    }
+  ]
+}

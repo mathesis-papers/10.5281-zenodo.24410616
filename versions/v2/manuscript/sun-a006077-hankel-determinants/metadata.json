@@ -1,0 +1,15 @@
+{
+  "id": "sun-a006077-hankel-determinants",
+  "revision": 2,
+  "problem_ids": ["sun-a006077-hankel-determinants"],
+  "topic": "Sun's all-index A006077 Hankel determinant conjecture",
+  "title": "Inertia extensions of Krattenthaler's identity for Sun's Hankel determinant conjecture",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Sun's On some determinants with Legendre symbol entries, arXiv:1308.2900v5, Conjecture 3.16, p. 17, we extend the zero-class identity credited to C. Krattenthaler in arXiv:1308.2900v6 (April 24, 2014), Remark 3.16. For A006077, the Hankel determinant of order n+1 vanishes exactly when n is congruent to 1 modulo 3; otherwise its quotient by (-1)^floor((n+1)/3) 6^n is a positive odd integer. Binomial translation gives a three-block factorization. Integral row normalization reduces parity to the Rueppel determinants, and a positive moment representation gives the sign. We also give parameter-independent and square-class consequences, the exact inertia, and a two-parameter deformation. Related moment arguments establish the harmonic sign assertion in Conjecture 3.9(i) and the two squared-number assertions in Conjecture 3.17.",
+  "summary": "The complete A006077 assertion, exact inertia and nullity, scale and translation deformations, and moment proofs of Sun's harmonic and Bernoulli/Euler-square sign assertions; pinned Lean coverage is restricted to A006077. The later prime-square congruence is separate.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Combinatorics/Hankel/SunA006077Result.lean"
+}
