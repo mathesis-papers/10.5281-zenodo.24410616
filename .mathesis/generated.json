@@ -24,7 +24,7 @@
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
     "README.md": "f06199ed395f1a25a8b0ea8317953e0f17eee8a5d3574dbf5a850de0aa7cad19",
-    "formalization/nodes.json": "24dfe67dbb8e70a464d51bc23827c618ef08fea89c21d489e93c093bc64562dd",
+    "formalization/nodes.json": "e1b7f814154bddfd7234b700b4ce4f9fa5dd3210aee9f5a46f9ae44ad4fb9581",
     "manuscript/sun-a006077-hankel-determinants/README.md": "5f98a11ffbc82938d394b8ffac6b0254d601ac43a0ed7a6ab2e4a973661ff6c0",
     "manuscript/sun-a006077-hankel-determinants/finite-check.json": "212fb9dac149d59f515ddc05da8aad1447cc307a89bf8c9264474a11b950be65",
     "manuscript/sun-a006077-hankel-determinants/metadata.json": "5789e4b72a627c1b13ecca43d4bf649bacbfc1dfd86b9ff4c982904b48448aac",
@@ -36,5 +36,5 @@
     "paper.pdf": "522641cb92bf93685d7d975b98fda917a206dde038d563adad8e0ebc009e65f1",
     "source.archive": "ff74770aac39599ad7edeac3e757f7b7438f81dc1f24e533d80a7442b9454f80"
   },
-  "snapshot_identity": "f614f33ac0d4eb91aaee51d2ea779d571dc966dac6a31177511cb30549ff917a"
+  "snapshot_identity": "7f193fc3997d0732e04785aa31c10a9b90ce9eac564df242e20a0c8e90d391c3"
 }
