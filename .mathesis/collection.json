@@ -1,6 +1,6 @@
 {
   "git_blobs": {
-    ".github/workflows/pages.yml": "b8af16610dab4ba11e2e1e84b1644973ff13ae32",
+    ".github/workflows/pages.yml": "96cd25d9bb1f21ce2f884a157432eb7113bb6eae",
     ".mathesis/generated.json": "c76bd6ac246d786cc51953f27d75d10a984c4b0d",
     "CHANGELOG.md": "951f2737dfdea6ab723351658c6f86306ad59aa8",
     "CITATION.cff": "df4f20e0fe5613f96bd3c2ab0a1b05dbf9e48cd8",
@@ -40,7 +40,7 @@
   },
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
-    ".github/workflows/pages.yml": "0992542f487b0e162564dd4833a8285760156931642e20f919f024b7a2fd0f9f",
+    ".github/workflows/pages.yml": "b431190ddf1bb01fce3be05886bb206ef39d4261c207dbbaf066b7f439f4a215",
     ".mathesis/generated.json": "8a60b75d56b3fe91cb0d0342ba32c3d7d1ed4e5eb1d5aede177273f7bea4b3d2",
     "CHANGELOG.md": "7fe7d3839a833cf24793be4cbb752c6e9d62da3df9ae4b2970768c2f4ec0e334",
     "CITATION.cff": "7a2d24ce7fee8c94b279db8264d5b7b1e07ceb96d7bd0e8ea067b90a1839a874",
